@@ -1,3 +1,4 @@
+import { User } from './model/user';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'doourcode-ui-test';
+  title = 'dourcode';
+  user: User | undefined
+  constructor() {
+  }
+
+  isLogged():boolean{
+    return window.localStorage.getItem('token') != null;
+  }
+
 }

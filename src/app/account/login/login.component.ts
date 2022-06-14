@@ -1,8 +1,8 @@
 import { Auth } from './../../model/auth';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +12,7 @@ import { AuthService } from 'src/app/service/auth.service';
 export class LoginComponent implements OnInit {
   form: FormGroup;
   user: Auth | undefined;
+  @Input() error: string | null | undefined;
 
   constructor(private fb: FormBuilder,
     private authService: AuthService,
@@ -24,6 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
   login() {

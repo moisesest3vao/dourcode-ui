@@ -28,4 +28,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/learning']);
   }
 
+  dropdownTrigger(){
+    document.querySelector(".dropdown-trigger")?.dropdown();
+  }
+
 }

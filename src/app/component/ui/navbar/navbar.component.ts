@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { AccountService } from './../../../service/account.service';
 import { Component, OnInit } from '@angular/core';
+import * as $ from "jquery";
 
 
 @Component({
@@ -9,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  isNavbarCollapsed=true;
   constructor(private accountService:AccountService,
     private router:Router) { }
 
@@ -28,8 +28,21 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/learning']);
   }
 
-  dropdownTrigger(){
-    document.querySelector(".dropdown-trigger")?.dropdown();
+  goToMyCourses():void{
+    this.router.navigate(['/my-courses']);
   }
+
+  toggle() {
+    var x = document.getElementById("myTopnav");
+    if (x?.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      if(x != undefined){
+        x.className = "topnav";
+      }
+    }
+  }
+
+
 
 }

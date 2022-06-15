@@ -57,7 +57,9 @@ export class CreateAccountComponent implements OnInit {
           .subscribe(
             (data: Auth) => {
               this.authenticate(data);
-              this.router.navigateByUrl('/');
+              this.router.navigateByUrl('/').then(() => {
+                window.location.reload();
+              });
             }, error => {
               this.error = true;
             }

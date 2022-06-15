@@ -12,7 +12,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   form: FormGroup;
   user: Auth | undefined;
-  @Input() error: string | null | undefined;
+  error: boolean = false;
 
   constructor(private fb: FormBuilder,
     private authService: AuthService,
@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
           (data: Auth) => {
             this.authenticate(data);
             this.router.navigateByUrl('/');
+          }, error => {
+            this.error = true;
           }
         );
     }
@@ -44,6 +46,10 @@ export class LoginComponent implements OnInit {
 
   authenticate(auth: Auth): void {
     window.localStorage.setItem('token', auth.token);
+  }
+
+  criarConta() {
+    this.router.navigate(['/create-account'])
   }
 
 }

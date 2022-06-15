@@ -11,14 +11,11 @@ main {
 
 }
 
-body {
 
-}
-
-.input-field input[type=date]:focus + label,
-.input-field input[type=text]:focus + label,
-.input-field input[type=email]:focus + label,
-.input-field input[type=password]:focus + label {
+.input-field input[type=date]:focus+label,
+.input-field input[type=text]:focus+label,
+.input-field input[type=email]:focus+label,
+.input-field input[type=password]:focus+label {
   color: #e91e63;
 }
 
@@ -30,6 +27,6 @@ body {
   box-shadow: 1cm;
 }
 
-.cartao{
+.cartao {
   background-color: #000000c1;
 }

@@ -21,7 +21,11 @@ export class NavbarComponent implements OnInit {
   }
 
   goToProfile():void{
-    this.router.navigate(['me']);
+    this.router.navigate(['/me']);
+  }
+
+  goToLearning():void{
+    this.router.navigate(['/learning']);
   }
 
 }

@@ -19,6 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MeComponent } from './component/profile/me/me.component';
 import { JwtInterceptor } from './account/shared/jwt.interceptor';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { JwtInterceptor } from './account/shared/jwt.interceptor';
     LoginComponent,
     HomeComponent,
     MeComponent,
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,

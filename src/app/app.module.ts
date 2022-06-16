@@ -20,6 +20,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MeComponent } from './component/profile/me/me.component';
 import { JwtInterceptor } from './account/shared/jwt.interceptor';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { MyCoursesComponent } from './component/profile/my-courses/my-courses.component';
+import { CreateCourseComponent } from './component/profile/create-course/create-course.component';
+import { ViewCourseComponent } from './component/view-course/view-course.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { CreateAccountComponent } from './account/create-account/create-account.
     HomeComponent,
     MeComponent,
     CreateAccountComponent,
+    MyCoursesComponent,
+    CreateCourseComponent,
+    ViewCourseComponent,
   ],
   imports: [
     BrowserModule,

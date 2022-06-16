@@ -1,4 +1,4 @@
-<app-navbar *ngIf="isLogged()"></app-navbar>
-<app-sidebar *ngIf="isLogged()"></app-sidebar>
+<app-navbar *ngIf="isLoggedAndIsNotOnLoginPage()"></app-navbar>
+<app-sidebar *ngIf="isLoggedAndIsNotOnLoginPage()"></app-sidebar>
 <router-outlet></router-outlet>
-<app-footer *ngIf="isLogged()"></app-footer>
+<app-footer *ngIf="isNotOnLoginPage()"></app-footer>

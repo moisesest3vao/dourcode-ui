@@ -12,8 +12,8 @@ const createAccountModule = () => import('./account/create-account/create-accoun
 //routes
 const routes: Routes = [
   {path: "login", loadChildren: loginModule },
+  {path: "home", loadChildren: homeModule },
   {path: "create-account", loadChildren: createAccountModule },
-  {path: "home", loadChildren: homeModule, canActivate: [AuthGuard]},
   {path: "me", loadChildren: meModule, canActivate: [AuthGuard] },
 
 

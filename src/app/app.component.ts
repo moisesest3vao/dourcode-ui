@@ -1,3 +1,4 @@
+import { NavigationEnd, Router } from '@angular/router';
 import { User } from './model/user';
 import { Component } from '@angular/core';
 
@@ -8,12 +9,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dourcode';
-  user: User | undefined
+  private href: string | undefined;
+  user: User | undefined;
+
   constructor() {
+    this.href = window.location.pathname;
   }
 
-  isLogged():boolean{
+  isLogged(): boolean {
     return window.localStorage.getItem('token') != null;
+  }
+
+  isNotOnLoginPage() {
+
+    return this.href != '/login' && this.href != '/create-account';
+  }
+
+  isLoggedAndIsNotOnLoginPage() {
+    return this.isLogged() && this.isNotOnLoginPage;
   }
 
 }

@@ -25,7 +25,7 @@ h1 {
 }
 
 .icone {
-  width: 250px;
+  width: 50%;
 }
 
 .produtos li {
@@ -63,6 +63,11 @@ aula {
   }
 }
 
+.iframe{
+  width: 500px;
+  height: 400px;
+}
+
 .preco {
   font-size: 22px;
   color: green;
@@ -86,8 +91,18 @@ aula {
     padding: 0;
   }
 
+  .video{
+    width: auto;
+    height: auto;
+  }
+
   .produtos li, .cursos li {
     width: 90%;
+  }
+
+  .iframe{
+    width: 98%;
+    height: 400px;
   }
 
 

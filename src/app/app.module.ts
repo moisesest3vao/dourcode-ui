@@ -23,6 +23,8 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { MyCoursesComponent } from './component/profile/my-courses/my-courses.component';
 import { CreateCourseComponent } from './component/profile/create-course/create-course.component';
 import { ViewCourseComponent } from './component/view-course/view-course.component';
+import { ViewLessonComponent } from './component/view-lesson/view-lesson.component';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { ViewCourseComponent } from './component/view-course/view-course.compone
     MyCoursesComponent,
     CreateCourseComponent,
     ViewCourseComponent,
+    ViewLessonComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

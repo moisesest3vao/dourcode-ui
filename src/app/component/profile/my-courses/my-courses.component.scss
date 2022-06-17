@@ -1,0 +1,108 @@
+main {
+  background-color: black;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.cursos .cube {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 2px cornflowerblue;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+.icone {
+  width: 250px;
+}
+
+.produtos li {
+  background-color: black;
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 2px dashed white;
+  border-radius: 10px;
+}
+
+.produtos {
+
+  background-color: black;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.aula {
+  border: 2px cornflowerblue;
+  border-style: solid;
+  padding: 20px 20px 20px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.047) !important;
+
+  }
+}
+
+.preco {
+  font-size: 22px;
+  color: green;
+  margin-top: 10px;
+}
+
+.descricao {
+  font-size: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+@media screen and (max-width:767px) {
+  .section {
+    display: grid;
+    width: auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .produtos li,
+  .cursos li {
+    width: 90%;
+  }
+
+
+  .produtos {
+    width: 90%;
+  }
+
+}
+
+@media screen and (min-height:768px) and (max-height: 1000px) {
+
+  .icone {
+    width: 100px;
+  }
+
+}

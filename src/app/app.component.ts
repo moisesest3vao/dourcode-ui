@@ -26,7 +26,7 @@ export class AppComponent {
   }
 
   isLoggedAndIsNotOnLoginPage() {
-    return this.isLogged() && this.isNotOnLoginPage;
+    return this.isLogged() && this.isNotOnLoginPage();
   }
 
 }

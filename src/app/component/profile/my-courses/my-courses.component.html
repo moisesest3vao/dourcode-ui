@@ -1,1 +1,49 @@
-<p>my-courses works!</p>
+<main>
+  <ul class="produtos center">
+    <div class="section"></div>
+    <h1 class="text-white">Meus Cursos</h1>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section">
+      <li>
+        <h2 class="white-text">Ensine</h2>
+        <img class="icone" src="https://i.imgur.com/MzHXHYM.png">
+        <p class="white-text descricao mt-3">Torne-se um instrutor da plataforma. Confira seus cursos cadastrados ou
+          clique <a (click)="goToNewCourse()" class="blue-text">aqui</a> para cadastrar um novo.</p>
+        <p class="white-text" class="preco">R$0,00</p>
+      </li>
+    </div>
+  </ul>
+  <div class="section cursos center">
+
+    <div class="text-white" *ngFor="let course of userCourses; let indexCourse = index">
+      <li class="aula cube mb-4">
+        <div (click)="goToCourse(indexCourse)">
+          <h2 class="white-text">{{course.name}}</h2>
+          <div>
+            <p class="white-text descricao">{{course.description}}</p>
+          </div>
+          <div>
+            <h3>Aulas:</h3>
+            <ul>
+              <div class="aula" *ngFor="let lesson of course.lessonList; let indexLesson = index;">
+                <div (click)="goToLesson(indexCourse, indexLesson)">
+                  <li class="mb-1 descricao">{{lesson.name}}</li>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </div>
+
+
+  </div>
+  <div class="section"></div>
+  <div class="container center mt-4">
+    <button class="btn-lg btn-primary mb-4" (click)="goToNewCourse()">Cadastrar um curso</button>
+  </div>
+  <div class="section"></div>
+  <div class="section"></div>
+  <div class="section"></div>
+</main>

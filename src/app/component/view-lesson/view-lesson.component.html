@@ -1,0 +1,30 @@
+<main>
+  <ul class="cursos center">
+    <div class="section"></div>
+    <h1 class="text-white">{{lesson?.name}}</h1>
+    <div class="video">
+      <iframe class="iframe" [src]="this.getIFrameUrl() | safe" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="section"></div>
+    <div class="section">
+      <li>
+        <h2 class="white-text"></h2>
+
+        <h3 class="descricao white-text"><strong>{{lesson?.description}}</strong></h3>
+        <p class="white-text" class="preco">Grátis</p>
+        <p class="white-text" class="preco">R$0,00</p>
+      </li>
+    </div>
+  </ul>
+
+  <div class="section center cursos">
+
+  </div>
+
+  <div class="section"></div>
+  <div class="section"></div>
+  <div class="section"></div>
+</main>

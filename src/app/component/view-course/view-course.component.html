@@ -1,1 +1,51 @@
-<p>view-course works!</p>
+<main>
+  <ul class="cursos center">
+    <div class="section"></div>
+    <h1 class="text-white">{{course?.name}}</h1>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section">
+      <li>
+        <h2 class="white-text"></h2>
+        <img class="icone" src="https://i.imgur.com/OeR7tK3.png">
+        <p class="white-text descricao mt-3">{{course?.description}}</p>
+        <p class="white-text" class="preco">R$0,00</p>
+
+      </li>
+    </div>
+  </ul>
+
+  <div class="section center cursos">
+    <ul>
+      <li *ngFor="let lesson of course?.lessonList; let i = index" class="text-white">
+        <h3 class="descricao"><strong>{{i+1}}. {{lesson.name}}</strong></h3>
+        <span [ngSwitch]="lesson.type">
+        <p *ngSwitchCase="'YT_VIDEO'">
+          <a>Vídeo</a>
+        <br>
+          <img class="img" src="https://i0.wp.com/multarte.com.br/wp-content/uploads/2020/04/youtube.png?fit=512%2C512&ssl=1" alt="">
+        </p>
+        <p *ngSwitchCase="'TEXT'">
+          <a>Leitura</a>
+          <br>
+          <img class="img" src="https://cdn.pixabay.com/photo/2013/07/12/15/20/author-149694_960_720.png" alt="">
+        </p>
+        <p *ngSwitchCase="'EXTERNAL_LINK'">
+          <a>Link externo</a>
+          <br>
+          <img class="img" src="https://images.vexels.com/media/users/3/198119/isolated/preview/b7a167b83c4b04525720486cd137077a-porta-isometrica-em-forma-de-arco.png" alt="">
+        </p>
+        <p *ngSwitchDefault>
+          Indefinido
+        </p>
+        </span>
+        <p>{{lesson.description}}</p>
+        <button class="btn-lg btn-primary" (click)="goToLesson(i)">Ir para aula</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section"></div>
+  <div class="section"></div>
+  <div class="section"></div>
+</main>
